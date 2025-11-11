@@ -26,7 +26,7 @@ SECRET_KEY = 'x8(h3*68o3-=^#byrr#7p*4aupyu#2m6i=dc327cv@p6@pn2lv'
 #DEBUG = True
 DEBUG=bool(int(os.environ.get('DEBUG',1))) #Debug mode on local machine but not on server
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ec2-3-238-53-140.compute-1.amazonaws.com', '127.0.0.1']
 
 
 # Application definition
@@ -124,3 +124,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 AUTH_USER_MODEL= 'profiles_api.UserProfile'
+
+STATIC_ROOT= 'static/'
